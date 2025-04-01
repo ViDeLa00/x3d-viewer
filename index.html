@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <!-- Ensure proper scaling on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>X3D Model Viewer</title>
   <!-- Include X3DOM from their CDN -->
@@ -9,24 +10,40 @@
   <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css">
   <style>
     body {
+      margin: 0;
+      padding: 0;
       text-align: center;
       font-family: Arial, sans-serif;
     }
-    x3d {
-      width: 80%;
-      height: 500px;
+    /* Responsive container for the X3D canvas */
+    .viewer-container {
+      width: 100%;
+      max-width: 800px; /* Adjust max-width as needed */
       margin: auto;
+    }
+    x3d {
+      width: 100%;
+      height: 70vh;  /* 70% of the viewport height */
+      min-height: 300px;
       border: 1px solid #ccc;
+    }
+    /* For smaller devices, adjust the height */
+    @media (max-width: 600px) {
+      x3d {
+        height: 50vh;
+      }
     }
   </style>
 </head>
 <body>
   <h1>X3D Model Viewer</h1>
-  <X3D>
-    <Scene>
-      <!-- Use the direct Dropbox link here -->
-      <Inline url="https://dl.dropboxusercontent.com/scl/fi/b06kuvjoaxh2nd5kbp5xw/x3d_file.x3d?rlkey=gcnhajakx9fkr8ednsqt8mrkj&st=wkrzbeaf&dl=1"></Inline>
-    </Scene>
-  </X3D>
+  <div class="viewer-container">
+    <X3D>
+      <Scene>
+        <!-- Use the direct Dropbox link here -->
+        <Inline url="https://dl.dropboxusercontent.com/scl/fi/b06kuvjoaxh2nd5kbp5xw/x3d_file.x3d?rlkey=gcnhajakx9fkr8ednsqt8mrkj&st=wkrzbeaf&dl=1"></Inline>
+      </Scene>
+    </X3D>
+  </div>
 </body>
 </html>
