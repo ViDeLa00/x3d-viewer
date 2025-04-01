@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X3D Model Viewer</title>
+  <!-- Include X3DOM from their CDN -->
+  <script type="text/javascript" src="https://www.x3dom.org/download/x3dom.js"></script>
+  <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css">
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    x3d {
+      width: 80%;
+      height: 500px;
+      margin: auto;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>X3D Model Viewer</h1>
+  <X3D>
+    <Scene>
+      <!-- Use the direct Dropbox link here -->
+      <Inline url="https://dl.dropboxusercontent.com/scl/fi/b06kuvjoaxh2nd5kbp5xw/x3d_file.x3d?rlkey=gcnhajakx9fkr8ednsqt8mrkj&st=wkrzbeaf&dl=1"></Inline>
+    </Scene>
+  </X3D>
+</body>
+</html>
